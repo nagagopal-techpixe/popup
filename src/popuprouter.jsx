@@ -33,7 +33,7 @@ export default function PopupModal() {
     fetchMedia();
   }, [mediaId]);
 
-  // Handle subscribe
+  // Handle subscribe to send mail
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
