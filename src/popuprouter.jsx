@@ -10,7 +10,7 @@ export default function PopupModal() {
   const [message, setMessage] = useState("");
   const [showPopup, setShowPopup] = useState(true);
 
-  // Fetch media from backend
+  // Fetch media from backend yes
   useEffect(() => {
     async function fetchMedia() {
       try {
