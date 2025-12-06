@@ -1,0 +1,436 @@
+/* ------------------------------ */
+/* FULL SCREEN OVERLAY */
+/* ------------------------------ */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  /* background: rgba(0, 0, 0, 0.82); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+    
+.popup-container {
+  position: relative;
+  background: #000;
+  color: #fff;
+  width: 905px;
+  max-height:100%;
+  min-height:470px;
+  border-radius: 32px;
+  padding: 60px;
+  display: flex;
+  flex-direction: row;        /* <--- keeps image + text side by side */
+  align-items: center;        /* <--- vertical alignment */
+  gap: 32px;
+  border: 1px solid white;
+  box-shadow: 
+    0px 10px 20px rgba(255, 255, 255, 0.2),
+    0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+
+.popup-left {
+  flex: 1.4;  
+  width:470px; 
+  max-height:100%;
+  min-height:320px;   
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+.popup-left-text {
+  width: 480px;  
+  max-height:100%;         /* fixed width */
+  min-height: 190px;          /* fixed height */
+  opacity: 1;             /* fully visible */
+  display: flex;          /* to apply gap between child elements */
+  flex-direction: column; /* stack children vertically */
+  gap: 8px;               /* spacing between children */
+  transform: rotate(0deg); /* 0 degree rotation (optional) */
+    text-align: center;
+
+}
+
+/* Title */
+.popup-title {
+  font-family: "Helvetica Now Tex", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 54px;
+  /* margin-bottom: 19px; */
+  letter-spacing: 0.02em;
+}
+
+/* Description */
+.popup-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  /* margin-bottom: 35px; */
+  letter-spacing: 0.02em;
+}
+
+/* ------------------------------ */
+/* FORM */
+/* ------------------------------ */
+.popup-form {
+  width:488px;
+  max-height:100%;
+  min-height:120px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.popup-form input {
+  width: 470px; 
+    max-height:100%;
+  /* min-height:50px;               */
+  padding: 12px 16px 12px 16px;
+  background: #fff;
+  color: #000;
+  border-radius: 2px;
+}
+
+.popup-form input::placeholder {
+  font-style: "Space Grotesk";
+  font-weight: 500;
+  font-size:20px;
+  color: black;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+
+/* Submit Button */
+.SubmitPOP {
+  font-style: "Space Grotesk";
+  line-height: 100%;
+  letter-spacing: 0.02em;
+   width: 499px; 
+    /* max-height:100%; */
+  /* min-height:50px;               */
+    max-height:100%;
+  
+  padding: 12px;
+  border-radius: 2px;
+  background: #FF4400;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+/* ------------------------------ */
+/* RIGHT-SIDE IMAGE */
+/* ------------------------------ */
+.popup-right {
+  width:280px;
+  height:400px;
+  flex: 1;        /* The image container gets space */
+  display: flex;
+  justify-content: center;
+}
+
+.popup-right img {
+  width:100%;
+  height:100%;
+  /* object-fit: fulfill; */
+  object-fit: fulfill;
+  border-radius: 8px;
+  /* border:2px solid yellow; */
+}
+
+/* ------------------------------ */
+/* CLOSE BUTTON */
+/* ------------------------------ */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .popup-container {
+  width: 680px;
+  max-height:100%;
+  min-height:340px;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid white;
+}
+.close-btn {
+  width:22px;
+  height:24px;
+  top: 8px;
+  right: 25px;
+  font-style: bold;
+  font-size:17px;
+  font-weight: 800;
+}
+.popup-left {
+  flex: 1.4;  
+  width:380.63px; 
+  max-height:100%;
+  min-height:276px;   
+  gap:16px;
+}
+.popup-left-text {
+  width: 380.63px;  
+  max-height:100%;         /* fixed width */
+  min-height: 156px;          /* fixed height */
+  gap: 8px;               /* spacing between children */
+ 
+}
+.popup-title {
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+}
+.popup-text {
+  width:380.63px;
+  height:60px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.popup-form {
+  width:380.63px;
+  max-height:100%;
+  min-height:104px;
+  gap: 16px;
+}
+.popup-form input {
+  width: 352.63px; 
+    /* max-height:100%; */
+  /* min-height:44px;               */
+  padding: 12px;
+  border-radius: 4px;
+  gap:8px;
+  /* border: 0.5px solid #fff; */
+}
+.popup-form input::placeholder {
+  font-style: "Space Grotesk";
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+
+.SubmitPOP {
+  line-height: 100%;
+  letter-spacing: 0.02em;
+   width: 380.63px; 
+    /* max-height:100%; */
+  /* min-height:44px;               */
+  padding: 12px;
+  border-radius: 4px;
+  background: #FF4400;
+  font-size: 16px;
+  font-weight: 700;
+  font-style:bold;
+}
+  .popup-right {
+    width:203.37px;
+    height:276px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.popup-right img {
+   width:203.37px;
+  height:276px;
+  border-radius: 8px;
+  /* object-fit: cover; */
+}
+}
+
+@media (max-width: 768px) {
+
+  /* MAIN POPUP CONTAINER — MOBILE STACK */
+  .popup-container {
+    width: 300px;
+    height:auto;
+    padding: 24px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;      /* stack vertically */
+    justify-content:center; /* NO centering */
+    align-items: center;     /* align text left */
+    gap: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  /* CLOSE BUTTON */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  /* LEFT TEXT AREA */
+  .popup-left {
+    width: 252px;          /* Fill full popup width */
+    height:136px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* border:1px solid yellow */
+  }
+
+  .popup-left-text {
+    width: 252px;          /* Fill full popup width */
+    height:148px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    /* margin-top: 40px; */
+    /* border:1px solid green; */
+  }
+
+  /* TITLE */
+  .popup-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 900;
+    line-height: 36px;
+    letter-spacing: 0.02px;
+    /* margin-top: 1px; */
+  }
+
+  /* DESCRIPTION */
+  .popup-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.02px;
+   
+    /* margin-bottom: 0px; */
+  }
+
+  /* FORM */
+  .popup-form {
+    width: 100%;
+    /* height:76px; */
+     z-index: 10; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    
+  }
+
+
+  .popup-form input {
+    width: 228px;
+    /* height: 34px; */
+    padding: 8px 12px 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+
+  }
+
+  .popup-form input::placeholder {
+  font-style: "Space Grotesk";
+  font-weight: 500;
+  color: black;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+  .SubmitPOP {
+    width: 252px;
+    height: 34px;
+    font-size: 18px;
+    border-radius: 4px;
+    padding:8px 12px 8px 12px;
+  }
+
+  /* RIGHT IMAGE */
+  .popup-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .popup-right img {
+    width: 100%;
+    height: auto; /* let it scale naturally */
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+}
+
+
+@media (min-width: 1440px) {
+  .popup-container {
+  color: #fff;
+  width: 920px;
+  max-height:100%;
+  min-height:500px;
+  border-radius: 32px;
+  padding: 60px;
+  gap: 32px;
+  }
+  .popup-left {
+  width:488px; 
+  max-height:100%;
+  min-height:334px; 
+  gap:16px;
+}
+.popup-left-text {
+  width: 488px;  
+  max-height:100%;         /* fixed width */
+  min-height: 198px;          /* fixed height */
+}
+.popup-title {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+
+.popup-text {
+  font-size: 20px;
+}
+.popup-form {
+  gap: 20px;
+}
+.popup-form input {
+  width: 488px; 
+    max-height:100%;
+  min-height:50px;              
+  padding: 12px 16px 12px 16px;
+  border-radius: 4px;
+}
+.SubmitPOP {
+   width: 488px; 
+    max-height:100%;
+  min-height:50px;              
+  border-radius: 4px;
+
+}
+}
+
